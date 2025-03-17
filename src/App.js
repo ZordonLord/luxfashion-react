@@ -3,6 +3,7 @@ import './App.css';
 import CommentsList from './components/CommentsList';
 import Message from './components/Message';
 import TemperatureConverter from './components/TemperatureConverter';
+import TodoList from './components/TodoList';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme } from '@mui/material/styles';
@@ -27,6 +28,7 @@ function App() {
         <Message text="Привет, это мой первый компонент Message!" />
         <CommentsList />
         <TemperatureConverter />
+        <TodoList />
       </div>
     </ThemeProvider>
   );
