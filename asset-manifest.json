@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/luxfashion/static/css/main.d6bd04ce.css",
+    "main.js": "/luxfashion/static/js/main.b3309b20.js",
+    "static/js/453.a91f12ee.chunk.js": "/luxfashion/static/js/453.a91f12ee.chunk.js",
+    "index.html": "/luxfashion/index.html",
+    "main.d6bd04ce.css.map": "/luxfashion/static/css/main.d6bd04ce.css.map",
+    "main.b3309b20.js.map": "/luxfashion/static/js/main.b3309b20.js.map",
+    "453.a91f12ee.chunk.js.map": "/luxfashion/static/js/453.a91f12ee.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d6bd04ce.css",
+    "static/js/main.b3309b20.js"
+  ]
+}
