@@ -6,25 +6,29 @@ import TemperatureConverter from './components/TemperatureConverter';
 import TodoList from './components/TodoList';
 import HomePage from './components/HomePage.jsx';
 import AboutPage from './components/AboutPage.jsx';
+import ThemeToggle from './components/ThemeToggle';
 import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { createTheme } from '@mui/material/styles';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { AppBar, Toolbar, Typography, Button, Container } from '@mui/material';
-
-const theme = createTheme({
-  palette: {
-    mode: 'light',
-    primary: {
-      main: '#1976d2',
-    },
-    secondary: {
-      main: '#dc004e',
-    },
-  },
-});
+import { useSelector } from 'react-redux';
 
 function App() {
+  const isDarkMode = useSelector((state) => state.theme.isDarkMode);
+
+  const theme = createTheme({
+    palette: {
+      mode: isDarkMode ? 'dark' : 'light',
+      primary: {
+        main: '#1976d2',
+      },
+      secondary: {
+        main: '#dc004e',
+      },
+    },
+  });
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -41,6 +45,7 @@ function App() {
               <Button color="inherit" component={Link} to="/about">
                 О нас
               </Button>
+              <ThemeToggle />
             </Toolbar>
           </AppBar>
 
